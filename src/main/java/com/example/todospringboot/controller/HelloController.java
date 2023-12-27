@@ -17,4 +17,13 @@ public class HelloController {
 //        throw new RuntimeException("Some error has happened. Please contact to support team...");
         return greeting;
     }
+
+    @GetMapping("basicauth")
+    public Greeting authentication() {
+        String message = "You are authenticated.";
+        Greeting greeting = new Greeting();
+        greeting.setMessage(message);
+//        throw new RuntimeException("Some error has happened. Please contact to support team...");
+        return greeting;
+    }
 }
