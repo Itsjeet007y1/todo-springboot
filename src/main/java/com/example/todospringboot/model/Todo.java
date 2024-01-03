@@ -1,11 +1,20 @@
 package com.example.todospringboot.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.util.Date;
 import java.util.Objects;
 
+@Entity
+@Table(name = "todo")
 public class Todo {
 
-    private long id;
+    @Id
+    @GeneratedValue
+    private Long id;
     private String username;
     private String description;
     private Date targetDate;
@@ -26,7 +35,7 @@ public class Todo {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
